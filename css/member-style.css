@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700');
+
+
+.teamSection{
+	font-family: 'Josefin Sans', sans-serif;
+}
+.teamSection a:focus, a:hover {
+    text-decoration: none !important;
+}
+.teamSection .clients-table{
+	margin: 0;
+	-webkit-box-shadow: 10px 10px 196px 7px rgba(0,0,0,0.55) !important;
+    box-shadow: 10px 10px 196px 7px rgba(0,0,0,0.55) !important;
+    align-items: center;
+}
+
+.teamSection .clients-table li{
+	margin: 26px 26px;
+	width: 250px;
+	height: 300px;
+	border: 0 !important;
+	/*background-color: #0f1010;*/
+	padding-left: 0px;
+}
+
+.teamSection .container{
+	padding: 0 25px !important;
+	align-items: center !important;
+
+}
+.teamSection #hero-caption{
+	    padding: 180px 60px 100px 60px;
+}
+
+.teamSection .team-member{
+	/*transform: translate(-50%,-50%);*/
+	width: 250px;
+	height: 300px;
+	transform-style: preserve-3d;
+	perspective: 600px;
+}
+
+.teamSection .team-member .front{
+	/*top: 0;
+	left: 0;
+	position: absolute;*/
+	width: 100%;
+	height: 100%;
+	/*background: #000;*/
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	transition: 0.5s;
+	
+}
+.teamSection .team-member:hover .front{
+
+	transform: rotateX(-180deg);
+}
+
+.teamSection .team-member .front img{
+	opacity: 1 !important;
+	height: 100%;
+}
+
+.teamSection .team-member .back{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #3c3939; /* For browsers that do not support gradients */
+    background-image: linear-gradient(90deg, #3c3939, grey);
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	transition: 0.5s;
+	
+}
+.teamSection .team-member .back:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	
+	height: 100%;
+	background: rgba(255,255,255,0.1);
+}
+
+.teamSection .team-member:hover .back{
+
+	transform: rotateX(0deg);
+}
+
+.teamSection .team-member .back .member-details{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.teamSection .team-member .back .member-details h2{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	color: #fff;
+	line-height: 26px;
+}
+
+.teamSection .team-member .back .member-details h2 span{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: #a7a7a7;
+}
+
+.teamSection .member-social-connect{
+	padding: 10px 0;
+}
+
+.teamSection .member-social-connect a{
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	background: #262626;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 50%;
+	transition: 0.5s;
+
+}
+
+.teamSection .member-social-connect a .fa{
+
+	line-height: 36px;
+
+}
+
+.teamSection .member-social-connect a:hover {
+
+	background: #e91e63;
+
+}
